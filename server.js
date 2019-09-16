@@ -39,3 +39,5 @@ db.sequelize.sync({ force: true }).then(function() {
     console.log("App listening on http://localhost:" + PORT);
   });
 });
+
+//notes for server.js
