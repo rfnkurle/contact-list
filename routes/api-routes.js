@@ -30,6 +30,12 @@ module.exports = function(app) {
 
     // this route should delete a contact from the table, if the id matches the ':id' url param
 	app.delete("/api/contacts/:id", function(req, res) {
-        
+        db.Contact.destroy({
+            where: {
+                id: req.params.id
+            }
+        }).then(function(contact){
+            
+        })
     });
 }
