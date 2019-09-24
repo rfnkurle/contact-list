@@ -33,7 +33,7 @@ require("./routes/html-routes.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-// Remember, we use 'force: true' only while actively altering our data model 
+// Remember, we use 'force: true' only while actively altering our data model ie in development 
 db.sequelize.sync({ force: true }).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on http://localhost:" + PORT);

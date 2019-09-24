@@ -2,6 +2,7 @@
 module.exports = function(sequelize, DataTypes) {
     //table like a constructor- can be used to build table and data in that table
     var Contact = sequelize.define("Contact", {
+        //contact becomes contacts in MySQL
         // firstName (VARCHAR, NOT NULL, between 1-30 characters)
         firstName: {
             type: DataTypes.STRING, //like VARCHAR in SQL
