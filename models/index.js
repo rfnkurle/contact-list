@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
+//big S Sequelize is funcitonality, little s is connection/data to database
 const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
@@ -16,7 +17,7 @@ if (config.use_env_variable) {
 }
 
 fs
-  .readdirSync(__dirname)
+  .readdirSync(__dirname)//reads directory, models in this case
   .filter(file => {
     return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
   })
