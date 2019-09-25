@@ -3,7 +3,7 @@ var db = require("../models"); //continue at 1:30 with Sarah
 module.exports = function(app) {
     // this route should render the Handlebars 'form' template
 	app.get("/contacts/new", function(req, res) {
-        res.render
+        res.render("form");
     });
 
     // this route should find all contacts in the table and render them using the Handlebars 

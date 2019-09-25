@@ -22,7 +22,7 @@ app.use(logger("dev"));
 // Static directory
 app.use(express.static("public"));
 
-// Sets up Handlebars
+// engine Sets up Handlebars to use with res.render
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
