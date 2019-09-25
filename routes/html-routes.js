@@ -9,7 +9,12 @@ module.exports = function(app) {
     // this route should find all contacts in the table and render them using the Handlebars 
     // 'contacts' template, sorted ascending by lastName, then by firstName
     app.get("/", function(req, res) {
-
+        db.Contact.findAll({
+            order: [["lastName", "ASC"], ["firstName", "ASC"]]
+        }).then(function(contacts){
+            console.log(contacts.dataValues)
+            res.render("contacts", { contacts: contacts } )
+        })
     });
 
     // this route should find all contacts of a particular type (Personal or Business) and render them 
