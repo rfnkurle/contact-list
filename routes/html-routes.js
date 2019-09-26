@@ -13,7 +13,8 @@ module.exports = function(app) {
             order: [["lastName", "ASC"], ["firstName", "ASC"]]
         }).then(function(contacts){
             console.log(contacts.dataValues)
-            res.render("contacts", { contacts: contacts } )
+            //array format how you want it 
+            res.render("contacts", { contacts: contacts, name: "Robby" } )
         })
     });
 
